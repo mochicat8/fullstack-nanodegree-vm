@@ -4,6 +4,8 @@
 
 import time
 import psycopg2
+import bleach
+
 ## Database connection
 
 ## Get posts from database.
@@ -19,6 +21,7 @@ def GetAllPosts():
     # posts.sort(key=lambda row: row['time'], reverse=True)
     DB = psycopg2.connect("dbname=forum")
     c = DB.cursor()
+    c.execute("update posts set content = 'cheese' where content like '%spam%'")
     posts = c.execute("select time, content from posts order by time desc")
     posts = ({'content': str(row[1]), 'time': str(row[0])}
               for row in c.fetchall())
