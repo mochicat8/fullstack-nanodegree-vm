@@ -36,6 +36,7 @@ def AddPost(content):
     t = time.strftime('%c', time.localtime())
     # DB.append((t, content))
     c = DB.cursor()
+    # Adds %s to escape quotation in case a SQL injection attack occurs
     c.execute("insert into posts values (%s)", (content,))
     # c.execute("update posts set content")
     DB.commit()
