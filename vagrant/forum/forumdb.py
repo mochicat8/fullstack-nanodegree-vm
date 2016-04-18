@@ -36,8 +36,8 @@ def AddPost(content):
     t = time.strftime('%c', time.localtime())
     # DB.append((t, content))
     c = DB.cursor()
-    c.execute("insert into posts values ('%s')" (content, ))
-    c.execute("update posts set content ")
+    c.execute("insert into posts values (%s)", (content,))
+    # c.execute("update posts set content")
     DB.commit()
     DB.close()
 
