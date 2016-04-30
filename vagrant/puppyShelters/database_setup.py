@@ -34,9 +34,9 @@ class Puppy(Base):
 	__tablename__= 'puppy'
 	#Mapper Functions
 	name = Column(String(80), nullable=False)
-	date_of_birth = Column(String(250), nullable=False)
-	weight = Column(String(250), nullable=False)
-	gender = Column(String(250))
+	date_of_birth = Column(Date, nullable=False)
+	gender = Column(Boolean)
+	weight = Column(Varchar(3), nullable=False)
 	shelter_id = Column(Integer, ForeignKey('shelter.id'))
 	shelter = relationship(Shelter)
 
