@@ -1,22 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Gist
- @mochicat8
- Sign out
- Watch 20
-  Star 147
- Fork 897 lobrown/Full-Stack-Foundations
- Code  Issues 17  Pull requests 29  Projects 0  Wiki Insights
-Branch: master Find file Copy pathFull-Stack-Foundations/Lesson-2/post-web-server/webserver.py
-4fe1e0b  on May 5, 2015
-@lobrown lobrown Made modification to make code PEP8 compliant
-3 contributors @lobrown @hassaanbinaslam @biank88
-RawBlameHistory
-72 lines (62 sloc)  2.78 KB
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 import cgi
 
@@ -88,6 +69,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
-GET | 200 | ? ms | GitHub.com
